@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&family=Poppins&display=swap');
+
+.app-main-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(246, 240, 240, 0.907);
+}
+
+.app-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.app-banner-logo {
+    display: inline-flex;
+    margin-top: 6px;
+    margin-left: 3rem;
+    margin-right: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 2.5px 10px;
+}
+
+.app-banner-logo i {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    color: rgba(10,30,0, 1);
+    transition: .3s ease;
+}
+
+.app-banner-logo i:hover {
+    /* color: rgba(10,30,0, 1); */
+    color: rgba(10,30,0, 0.3);
+
+}
+
+.app-banner-address {
+    margin-right: 5rem;
+}
+
+.app-banner-logo h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-banner-logo a {
+    margin-right: 5px;
+}
+
+.app-main {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    top: 33px;
+    left: 0;
+    background-color: #17681F;
+    padding: 0 110px;
+
+}
+
+.app-main-logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    color: rgba(255,255,255, 1);
+    padding: .6rem 0;
+}
+
+.app-main-logo img {
+    height: 65px;
+    top: 0;
+    left: 0;
+    border: 1.5px solid rgba(100,130,80, 0.3);
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.app-main-logo h2 {
+    /* display: flex; */
+    font-size: 5.9rem;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;    
+    text-transform: uppercase;
+    top: 10px;
+    /* color: white; */
+}
+
+.app-main-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.app-main-link ul li {
+    font-size: 1em;
+    font-weight: bolder;
+    margin-left: 1.9rem;
+    transition: .5s ease-in-out;
+}
+
+.app-main-link li a:hover {
+    background-color: transparent;
+    color: rgba(214, 214, 214, 0.634);
+    transition: .5s ease-out; 
+}
+
+.app-main-link li a {
+    display: flex;
+    color: rgba(255,255,255, 1);
+    text-decoration: none;
+}
+
+.app-main .app-main-link ul {
+    display: flex;
+}
