@@ -6,6 +6,7 @@
     left: 0;
     width: 100vw;
     background-color: rgba(246, 240, 240, 0.907);
+    z-index: 10;
 }
 
 .app-banner {
@@ -56,13 +57,16 @@
 
 .app-main {
     display: flex;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     justify-content: space-between;
     top: 33px;
     left: 0;
     background-color: #17681F;
     padding: 0 110px;
-
+    width: 100vw;
+    z-index: 10;
 }
 
 .app-main-logo {
@@ -71,7 +75,7 @@
     align-items: center;
     text-align: center;
     color: rgba(255,255,255, 1);
-    padding: .6rem 0;
+    padding: .3rem 0;
 }
 
 .app-main-logo img {
