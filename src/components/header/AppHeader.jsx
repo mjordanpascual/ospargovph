@@ -23,7 +23,7 @@ export default function AppHeader () {
             <header className='app-main'>
                 <div className='app-main-logo'>
                     <img src={Ospar1Logo} alt='Ospar1 Logo' className='img-fluid responsive' />
-                    <h2 className='mx-4 fs-1 app-main-brand'>Ospital ng Parañaque</h2>
+                    <h2 className='mx-4 fs-1 app-main-brand'><a href='#'>Ospital ng Parañaque</a></h2>
                 </div>
                 <div className='app-main-link'>
                     <ul>
