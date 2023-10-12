@@ -18,7 +18,7 @@ export default function AppHeader () {
                 <Container className='px-5' fluid>
                 <Navbar.Brand className='text-muted'>Follow us on:</Navbar.Brand>
                 <Nav className="me-auto navicons">
-                    <Nav.Link href="https://www.facebook.com/osparanaque.I"><i className='bx bxl-facebook me-3 fs-2 fw-bolder' ></i></Nav.Link>
+                    <Nav.Link href="https://www.facebook.com/osparanaque.I" target='_blank'><i className='bx bxl-facebook me-3 fs-2 fw-bolder' ></i></Nav.Link>
                     <Nav.Link href="#"><i className='bx bxl-twitter me-3 fs-2 fw-bolder' ></i></Nav.Link>
                     <Nav.Link href="#"><i className='bx bxl-instagram-alt me-3 fs-2 fw-bolder'></i></Nav.Link>
                 </Nav>
@@ -32,28 +32,28 @@ export default function AppHeader () {
             <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary">
                 <Container>
                     <img src={Image} width={55} className='d-none d-sm-block'/>
-                    <Navbar.Brand href="#home" className='fs-2 fw-bold ms-4'>Ospital ng Parañaque</Navbar.Brand>
+                    <Navbar.Brand href="/" className='fs-2 fw-bold ms-4'>Ospital ng Parañaque</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto fs-4 fw-bold">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#Services">Services</Nav.Link>
-                        <Nav.Link href="#OurDoctors">Our Doctors</Nav.Link>
-                        <Nav.Link href="#News&Events">News & Events</Nav.Link>
-                        <Nav.Link href="#About">About</Nav.Link>
-                        <Nav.Link href="#ContactUs">Contact Us</Nav.Link>
-                        <NavDropdown title="Sign In" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">
-                            Another action
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
-                            Separated link
-                        </NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
+                        <Nav className="ms-auto fs-4 fw-bold">
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="#Services">Services</Nav.Link>
+                            <Nav.Link href="#OurDoctors">Our Doctors</Nav.Link>
+                            <Nav.Link href="#News&Events">News & Events</Nav.Link>
+                            <Nav.Link href="#About">About</Nav.Link>
+                            <Nav.Link href="#ContactUs">Contact Us</Nav.Link>
+                            <NavDropdown title="Sign In" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Another action
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">
+                                Separated link
+                            </NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
