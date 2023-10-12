@@ -1,65 +1,62 @@
+// import Carousel from 'react-bootstrap/Carousel';
+// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+
 import './AppMain.css'
 
-import OsparLogo from '../../assets/numbawan.jpg'
-import womensmonth from '../../assets/womensmonth.jpg'
+// import womensmonthv3 from '../../assets/womensmonthv3.jpg'
+// import cochiringv3 from '../../assets/cochiringv3.jpg'
+import librengopera from '../../assets/librengopera.jpg'
 
 export default function AppMain () {
 
-    // const commercialBanner = [
-
-    //     banner1 {
-    //         id : 1,
-    //         image : {Ospar1Logo},
-    //         description: 'test description'
-    //     },
-
-    // ]
+    // const imageStyles = {
+    //     display: 'flex',
+    //     position: 'relative',
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //     textAlign: 'center',
+    //     height: '60vh',
+    //     width: '100vw',
+    //     // marginTop: '10px',
+    //     marginLeft: 'auto',
+    //     marginRight: 'auto',
+    //     backgroundPosition: 'center',
+    //     backgroundSize: 'cover'
+    //    // backgroundColor: 'red'
+    // }
 
     return (
 
         <>
 
-            <section className="d-flex justify-content-center align-items-center text-center main-section">
-                <div id="carouselExampleDark" className="carousel carousel-dark slide">
-                    <div className="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active" data-bs-interval="10000">
-                        <img src="..." className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                        </div>
-                        <div className="carousel-item" data-bs-interval="2000">
-                        <img src="..." className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                        </div>
-                        <div className="carousel-item">
-                        <img src="..." className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </section>
-           
+            {/* <section className="d-flex justify-content-center align-items-center text-center main-section">
+                <Carousel variant="dark" style={imageStyles}>
+                    <Carousel.Item interval={2000}>
+                        <img src={librengopera} />
+                        <Carousel.Caption>
+                        <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item interval={2000}>
+                        <img src={cochiringv3} />
+                        <Carousel.Caption>
+                        <h3>Second slide label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item interval={2000}>
+                        <img src={womensmonthv3} />
+                        <Carousel.Caption>
+                        <h3>Third slide label</h3>
+                        <p>
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </section> */}
+
         </>
 
     )
