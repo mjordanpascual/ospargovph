@@ -14,3 +14,15 @@
     text-align: center;
     
 } */
+
+.main-app-title {
+    letter-spacing: 1.6px;
+}
+
+#main-app-navbar {
+    letter-spacing: 1.9px;
+}
+
+@media screen (max-width: 992) {
+   #main-app-navbar {color: yellow !important;}
+}

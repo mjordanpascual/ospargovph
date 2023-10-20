@@ -1,0 +1,9 @@
+#cards {
+    opacity: 100% !important;
+    transition: 0.4s;
+}
+
+
+#cards:hover {
+    opacity: 75% !important;
+}
