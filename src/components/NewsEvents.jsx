@@ -1,60 +1,70 @@
-// import Card from 'react-bootstrap/Card';
+import Carousel from 'react-bootstrap/Carousel';
+import { Container, Row, Col } from 'react-bootstrap'
 
-export default function NewsEvents (){
+import womensmonthv3 from '../assets/womensmonthv3.jpg'
+import cochiringv3 from '../assets/cochiringv3.jpg'
+import librengopera from '../assets/librengopera.jpg'
+// import librengOperasyonv2 from '../../assets/librengOperasyonv2.jpg'
+
+export default function NewsEvents () {
+
+        const newsInfo = [
+            { image: womensmonthv3, title: "womensmonthv3", subtitle: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." },
+            { image: cochiringv3, title: "cochiringv3", subtitle: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." },
+            { image: librengopera, title: "librengopera", subtitle: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." },
+            { image: cochiringv3, title: "cochiringv3", subtitle: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." }
+        ]
+
+
     return (
-
         <>
-            <h1>News & Events</h1>
 
-            {/* <section className='pt-3 mb-5 bg-light text-dark justify-content-center align-items-center' id='news&events'>
-                        <h1 className='d-flex justify-content-center align-items-center pt-4'>News & Events</h1>
-                        <div className='d-flex'>
-                            <Card className='col w-25 p-1 m-1'>
-                                <Card.Img src={librengopera} id='cards'/>
-                                <Card.Body>
-                                    <Card.Title>Libreng Opera</Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.
-                                    </Card.Text>
-                                    <Button className='w-100' href='https://www.facebook.com/photo/?fbid=825404892704726&set=a.817902420121640' target='_blank'>Read Article</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='col w-25 p-1 m-1'>
-                                <Card.Img src={cochiringv3} id='cards'/>
-                                <Card.Body>
-                                    <Card.Title>Job Hiring</Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.
-                                    </Card.Text>
-                                    <Button className='w-100'>Go somewhere</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='col w-25 p-1 m-1'>
-                                <Card.Img src={womensmonthv3} id='cards'/>
-                                <Card.Body>
-                                    <Card.Title>Women's Month</Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.
-                                    </Card.Text>
-                                    <Button className='w-100'>Go somewhere</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='col w-25 p-1 m-1'>
-                                <Card.Img src={cochiringv3} id='cards'/>
-                                <Card.Body>
-                                    <Card.Title>Job Hiring</Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.
-                                    </Card.Text>
-                                    <Button className='w-100'>Go somewhere</Button>
-                                </Card.Body>
-                            </Card>
+            {/* <div>
+                <h1 className='my-5 text-center'>News & Events</h1>
+                <div className='d-flex gap-5 px-5 mb-5'>
+                    {newsInfo.map(renderCard)}
+                </div>
+            </div> */}
+
+        
+                <Container id='newsEvents'>
+                        <h1 className='heading text-center my-5'>News & Events</h1>
+                    <Row className='newsEvents mb-5' >
+                        <div className='cards col-sm-12 text-center col-md-6 col-lg-3'>
+                            <img 
+                                src={womensmonthv3}
+                                width={300} 
+                                height={180}
+                                className='rounded'
+                            />
                         </div>
-                </section> */}
-            </>
+                        <div className='cards  col-sm-12 text-center col-md-6 col-lg-3'>
+                            <img src={cochiringv3}
+                                width={300} 
+                                height={180}
+                                className='rounded'
+
+                            />
+                        </div>
+                        <div className='cards col-sm-12 text-center col-md-6 col-lg-3'>
+                            <img src={librengopera}
+                                width={300} 
+                                height={180}
+                                className='rounded'
+                            />
+                        </div>
+                        <div className='cards col-sm-12 text-center col-md-6 col-lg-3'>
+                            <img src={cochiringv3}
+                                width={300} 
+                                height={180}
+                                className='rounded'
+                            />
+                        </div>
+                    </Row>
+                </Container>
+          
+
+        </>
+
     )
 }

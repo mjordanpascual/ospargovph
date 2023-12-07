@@ -14,7 +14,7 @@ export default function AppHeader () {
     return (
         <>
 
-            <Navbar bg="light" data-bs-theme="light" className='d-none d-md-block m-0 p-0'>
+            {/* <Navbar bg="light" data-bs-theme="light" className='d-none d-md-block m-0 p-0'>
                 <Container className='px-5' fluid>
                 <Navbar.Brand className='text-muted'>Follow us on:</Navbar.Brand>
                 <Nav className="me-auto navicons">
@@ -27,7 +27,7 @@ export default function AppHeader () {
                     <Navbar.Brand className='text-muted'>440 Quirino Avenue La Huerta Parañaque City | Call us (8) 8580-7350</Navbar.Brand>
                 </Nav>
                 </Container>
-            </Navbar>
+            </Navbar> */}
 
             <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary sticky-top">
                 <Container>
@@ -39,7 +39,9 @@ export default function AppHeader () {
                             <Nav.Link as={Link} to="/" className='me-3'>Home</Nav.Link>
                             {/* <Nav.Link href="#services" className='me-3'>Services</Nav.Link> */}
                             <NavDropdown title='Services' className='me-3' id='basic-nav-dropdown'>
-                                <NavDropdown.Item href='/dentist'>DENTIST</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to='/services'>Online Services</NavDropdown.Item>
+                                {/* <NavDropdown>Online Services</NavDropdown> */}
+                                {/* <NavDropdown.Item href='/dentist'>DENTIST</NavDropdown.Item>
                                 <NavDropdown.Item href='/ent'>ENT</NavDropdown.Item>
                                 <NavDropdown.Item href='/orthosurgeon'>ORTHO-SURGEON</NavDropdown.Item>
                                 <NavDropdown.Item href='/gasthro'>GASTROENTEROLOGY</NavDropdown.Item>
@@ -64,19 +66,19 @@ export default function AppHeader () {
                                 <NavDropdown.Item href='/rheumatologist'>RHEUMATOLOGIST</NavDropdown.Item>
                                 <NavDropdown.Item href='/iminfectious'>IM-INFECTIOUS DISEASE</NavDropdown.Item>
                                 <NavDropdown.Item href='/pediapulmo'>PEDIA-PULMONOLOGIST</NavDropdown.Item>
-                                <NavDropdown.Item href='/hematologist'>HEMATOLOGIST</NavDropdown.Item>
+                                <NavDropdown.Item href='/hematologist'>HEMATOLOGIST</NavDropdown.Item> */}
                             </NavDropdown>
                             {/* <Nav.Link href="#ourDoctors" className='me-3'>Our Doctors</Nav.Link> */}
                             <NavDropdown title='Our Doctors' className='me-3' id='basic-nav-dropdown'>
-                                <NavDropdown.Item>Action</NavDropdown.Item>
-                                <NavDropdown.Item>Actions</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to='/doctors'>Find Doctor</NavDropdown.Item>
+                                {/* <NavDropdown.Item>Actions</NavDropdown.Item>
                                 <NavDropdown.Item>Actionss</NavDropdown.Item>
                                 <NavDropdown.Item>Actionsss</NavDropdown.Item>
-                                <NavDropdown.Item>Actionssss</NavDropdown.Item>
+                                <NavDropdown.Item>Actionssss</NavDropdown.Item> */}
                             </NavDropdown>
-                            <Nav.Link href='/news&events' className='me-3'>News & Events</Nav.Link>
-                            <Nav.Link href="#about" className='me-3'>About</Nav.Link>
-                            <Nav.Link href="#contactUs" className='me-3'>Contact Us</Nav.Link>
+                            <Nav.Link as={Link} to="/newsEvents" className='me-3'>News & Events</Nav.Link>
+                            <Nav.Link as={Link} to="/about" className='me-3'>About</Nav.Link>
+                            <Nav.Link as={Link} to="/contact" className='me-3'>Contact Us</Nav.Link>
                             <NavDropdown title="Sign In" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
