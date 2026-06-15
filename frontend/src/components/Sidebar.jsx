@@ -3,8 +3,9 @@ import React from 'react';
 const getMenuItems = (userRole) => {
   const baseItems = [
     { id: 'home', label: 'Dashboard', icon: '🏠' },
-    { id: 'patients', label: 'Patients', icon: '🩺' },
-    { id: 'appointments', label: 'Appointments', icon: '📅' },
+    // { id: 'patients', label: 'Patients', icon: '🩺' },
+    { id: 'products', label: 'Products', icon: '📦' },
+    // { id: 'appointments', label: 'Appointments', icon: '📅' },
     { id: 'inventory', label: 'Inventory', icon: '📦' },
     { id: 'reports', label: 'Reports', icon: '📊' },
     { id: 'settings', label: 'Settings', icon: '⚙️' }
@@ -24,8 +25,9 @@ const Sidebar = ({ user, activeItem, onSelect, onLogout }) => {
     <aside className="w-72 min-h-screen bg-blue-900 text-white shadow-lg">
         <div className="p-6 border-b border-blue-800">
           <h1 className="text-2xl font-bold">IHOMIS</h1>
-          {user.department && <p className="text-sm text-blue-100 mt-1 font-semibold">{user.department}</p>}
-          <p className="text-sm text-blue-200 mt-1">{user.role || 'User'}</p>
+          {/* {user.department && <p className="text-sm text-blue-100 mt-1 font-semibold">{user.department}</p>} */}
+          {user.department && <p className="text-sm text-blue-100 mt-1 font-semibold">{user.department.toUpperCase()}</p>}
+          <p className="text-xs bg-green-300 max-w-20.5 rounded-full flex p-1 items-center justify-center text-blue-800 mt-1">{user.role || 'User'}</p>
         </div>
 
         <div className="p-6">

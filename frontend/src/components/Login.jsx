@@ -58,8 +58,8 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
         <div className="text-center">
           <img src={ospar1logo} alt="OSPAR Logo" className="mx-auto h-16 w-auto" />
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            {/* Sign in to iHOMIS */}
-            Sign in to OSPAR
+            Sign in to iHOMIS
+            {/* Sign in to OSPAR */}
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Hospital Information Management System

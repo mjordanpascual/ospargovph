@@ -7,6 +7,10 @@ import AdminDashboard from './components/AdminDashboard';
 import heroImg from './assets/hero.png';
 import './App.css';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Mandatory styles
+
+
 function App() {
   const [currentView, setCurrentView] = useState('login');
   const [user, setUser] = useState(null);

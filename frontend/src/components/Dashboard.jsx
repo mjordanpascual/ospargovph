@@ -1,17 +1,36 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import InventoryAssets from './InventoryAssets';
 
+// const [items, setItems] = useState([]);
+// const [error, setError] = useState('');
+
 const stateCards = [
-  { title: 'Total Patients', value: 128, color: 'bg-green-500' },
-  { title: 'Upcoming Appointments', value: 18, color: 'bg-indigo-500' },
-  { title: 'Pending Lab Results', value: 8, color: 'bg-yellow-500' },
+  { title: 'Total Products', value: 128, color: 'bg-green-500' },
+  { title: 'Upcoming Products', value: 18, color: 'bg-indigo-500' },
+  { title: 'Pending Product Repairs', value: 8, color: 'bg-yellow-500' },
   { title: 'Messages', value: 4, color: 'bg-blue-500' },
 ];
+
+
+  // const loadItems = async () => {
+  //   try {
+  //     // const resp = await axios.get('http://localhost:5000/api/inventory');
+  //     const resp = await axios.get('http://172.16.2.201:5000/api/inventory');
+  //     setItems(resp.data.inventory || []);
+  //   } catch (err) {
+  //     setError('Could not load inventory items');
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   loadItems();
+  // }, []);
 
 const Dashboard = ({ activeView, user }) => {
   const renderContent = () => {
     switch (activeView) {
-      case 'patients':
+      case 'products':
         return <p>Patients list and management will be here.</p>;
       case 'appointments':
         return <p>Appointment scheduling and history will be here.</p>;

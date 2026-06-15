@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Mandatory styles
+
+
 const AdminDashboard = () => {
   const [departments, setDepartments] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -60,7 +64,8 @@ const AdminDashboard = () => {
           formData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
-        setSuccess('Entry updated successfully');
+        // setSuccess('Entry updated successfully');
+        toast.success('Entry updated successfully!');
       } else {
         await axios.post(
           // 'http://localhost:5000/api/departments',
@@ -68,7 +73,8 @@ const AdminDashboard = () => {
           formData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
-        setSuccess('Entry created successfully');
+        // setSuccess('Entry created successfully');
+        toast.success('Entry created successfully!');
       }
 
       setFormData({ name: '', description: '' });
@@ -93,29 +99,33 @@ const AdminDashboard = () => {
       return;
     }
 
-  const handleCancel = () => {
-    setFormData({ name: '', description: '' });
-    setEditingId(null);
-    setShowAddForm(false);
-    setError('');
-    setSuccess('');
-  }
-
     try {
       await axios.delete(
         // `http://localhost:5000/api/departments/${id}`,
         `http://172.16.2.201:5000/api/departments/${id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      setSuccess('Entry deleted successfully');
+      // setSuccess('Entry deleted successfully');
+      toast.error('Deleted successfully!');
       fetchDepartments();
     } catch (err) {
       setError('Failed to delete entry');
+      toast.error('Failed to delete entry');
     }
   };
 
+    const handleCancel = () => {
+    setFormData({ name: '', description: '' });
+    setEditingId(null);
+    setShowAddForm(false);
+    setError('');
+    setSuccess('');
+  }
+  
   return (
     <div className="min-h-screen bg-gray-100 p-6">
+    <ToastContainer position="top-right" autoClose={5000} />
+
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -240,7 +250,7 @@ const AdminDashboard = () => {
                     </button>
                     <button
                       type="button"
-                      // onClick={handleCancel}
+                      onClick={handleCancel}
                       className="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded-lg transition"
                     >
                       ❌ Cancel
@@ -341,6 +351,7 @@ const AdminDashboard = () => {
           </div>
         )}
       </div>
+    
     </div>
   );
 };

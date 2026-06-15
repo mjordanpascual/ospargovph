@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css'; // Mandatory styles
+
 const InventoryAssets = () => {
   const [items, setItems] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [form, setForm] = useState({ name: '', model: '', serial: '', location: '', department: '' });
   const [error, setError] = useState('');
   const [working, setWorking] = useState(false);
+  
 
   const printAssetLabel = (item) => {
     const printHtml = `
@@ -133,7 +137,7 @@ const InventoryAssets = () => {
           </script>
         </body>
       </html>
-    `;
+      `;
 
     const w = window.open('', '_blank');
     if (!w) {
